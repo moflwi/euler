@@ -45,10 +45,10 @@ public class EulerLib {
         long highest = 0;
         for(long i = 3; i <= Math.sqrt(number); i+=2) 
             if(number % i == 0 && isPrime(i))
-                highest = i;      
+                highest = i;
+
         return highest;
     }
-
 
     //returns if given number is prime or not
     public boolean isPrime(long number) {
@@ -56,10 +56,31 @@ public class EulerLib {
         for(long i = 3; i <= Math.sqrt(number); i+=2) 
             if(number % i == 0) 
                 return false;
+
         return true;
     }
 
+    //returns largest palindrom multiplying two 3digit numbers
+    public int getLargestPalindrom() {
+        int highest = 0;
+        int temp = 0;
+        for(int one = 999; one >= 100; one--) 
+            for(int two = 999;two >= 100; two--) 
+                temp = one*two;
+                if(isPalindrom(temp) && temp > highest) 
+                    highest=temp;      
+        return highest;
+    }
 
+    //check if isPalindrom -> true on yes, false on no
+    public boolean isPalindrom(int digits) {
+        String s = String.valueOf(digits);
+        int n = s.length();
+        for(int i = 0; i < n/2; i++) 
+            if(s.charAt(i) != s.charAt(n-i-1))
+                return false;
+        return true;
+    }
 
 
 
