@@ -52,8 +52,7 @@ public class EulerLib {
 
     //returns if given number is prime or not
     public boolean isPrime(long number) {
-        
-        for(long i = 3; i <= Math.sqrt(number); i+=2) 
+        for(long i = 2; i <= Math.sqrt(number); i++) 
             if(number % i == 0) 
                 return false;
 
@@ -109,6 +108,25 @@ public class EulerLib {
 
         return (int) Math.pow(sum, 2);
     }
+
+    //number as string, int x -> number of digits to be multiplied
+    public long getSumOf13(char[]number, int x) {
+        long result = Long.MIN_VALUE;
+        System.out.println(number);
+        long tempSum = 1;
+        for(int i = 0; i < number.length-x; i++) {
+            for(int j = i, count = 0; count < x; j++, count++) {
+                tempSum *= Character.getNumericValue(number[j]);
+            }
+            if(result<tempSum) 
+                result=tempSum;
+            tempSum = 1;
+            
+        }
+        System.out.println("test");
+        return result;
+    }
+
 
 
 
