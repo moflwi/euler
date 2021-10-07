@@ -39,15 +39,18 @@ public class EulerLib {
         return sum;
     }
 
+
+    //gets larges prime in given number via checkin isPrime()
     public long getLargesPrimefactor(long number) {
         long highest = 0;
         for(long i = 3; i <= Math.sqrt(number); i+=2) 
             if(number % i == 0 && isPrime(i))
-                highest = i;
-        
+                highest = i;      
         return highest;
     }
 
+
+    //returns if given number is prime or not
     public boolean isPrime(long number) {
         
         for(long i = 3; i <= Math.sqrt(number); i+=2) 
