@@ -82,7 +82,7 @@ public class EulerLib {
         return true;
     }
 
-
+    //smallest number where % from 1...20 is 0
     public int smallestEvenDivisible() {
         int i = 1;
         while(true) {
@@ -91,6 +91,25 @@ public class EulerLib {
             i++;
         }
     }
+
+
+    //sum of squre until given uperbound and return sum
+    public int sumSqr(int num) {
+        int sum = 0;
+        for(int i = 0; i <= num; i++) 
+            sum+= (int) Math.pow(i, 2);
+        return sum;
+    }
+
+    //sum first, square after, return sum
+    public int sumFirstSquareAfter(int num) {
+        int sum = 0;
+        for(int i = 1; i <= num; i++) 
+            sum+=i;
+
+        return (int) Math.pow(sum, 2);
+    }
+
 
 
 
