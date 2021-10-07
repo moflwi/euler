@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.util.ArrayList;
 //libary for project euler used in other javafiles
 public class EulerLib {
 
@@ -19,6 +20,22 @@ public class EulerLib {
             if(i % multiOne == 0 || i % multiTwo == 0) 
                 value+=i;
         return value;
+    }
+
+    //returns sum of all even numbers in fibonacci sequence until 4mio
+    public int sumFibonacci() {
+        //first 3 values -> 2,8 and 34 -> 44
+        int sum = 44;
+        int temp1 = 55;
+        int temp2 = 89;
+        for(int i = 0; temp2 < 4000000 ;i++) {
+            int innerTemp = temp1+temp2;
+            if((innerTemp) % 2 == 0)  
+                sum+= innerTemp;
+            temp1 = temp2;
+            temp2 = innerTemp;
+        }
+        return sum;
     }
 
 
