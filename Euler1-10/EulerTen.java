@@ -1,5 +1,3 @@
-import java.math.BigInteger;
-
 public class EulerTen {
     public static void main(String[] args) {
         EulerLib eulerLib = new EulerLib();
