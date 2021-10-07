@@ -127,6 +127,17 @@ public class EulerLib {
         return result;
     }
 
+    //TODO ->Euler9
+    //a<b<c where sum==1000
+    public String getPythTripletBrute() {
+
+        //for(int a = 3; a <=
+        return "";
+    }
+
+    
+
+
 
 
 
