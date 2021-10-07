@@ -1,5 +1,6 @@
+
 import java.math.BigInteger;
-import java.util.ArrayList;
+
 //libary for project euler used in other javafiles
 public class EulerLib {
 
@@ -28,7 +29,7 @@ public class EulerLib {
         int sum = 44;
         int temp1 = 55;
         int temp2 = 89;
-        for(int i = 0; temp2 < 4000000 ;i++) {
+        while(temp2 < 4000000) {
             int innerTemp = temp1+temp2;
             if((innerTemp) % 2 == 0)  
                 sum+= innerTemp;
@@ -36,6 +37,23 @@ public class EulerLib {
             temp2 = innerTemp;
         }
         return sum;
+    }
+
+    public long getLargesPrimefactor(long number) {
+        long highest = 0;
+        for(long i = 3; i <= Math.sqrt(number); i+=2) 
+            if(number % i == 0 && isPrime(i))
+                highest = i;
+        
+        return highest;
+    }
+
+    public boolean isPrime(long number) {
+        
+        for(long i = 3; i <= Math.sqrt(number); i+=2) 
+            if(number % i == 0) 
+                return false;
+        return true;
     }
 
 

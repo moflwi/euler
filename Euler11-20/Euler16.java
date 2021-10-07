@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class EulerLog {
+public class Euler16 {
     public static void main(String[] args) {
         EulerLib eulerLib = new EulerLib();
         long startTime = System.currentTimeMillis();
