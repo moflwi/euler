@@ -128,7 +128,7 @@ public class EulerLib {
         return result;
     }
 
-    // TODO ->Euler9
+    // needs work ->Euler9
     // a<b<c where sum==1000
     public String getPythTripletBrute() {
 
@@ -207,5 +207,15 @@ public class EulerLib {
         }
         return sum;
     }
+
+    public long collatzSequence(long n) {
+        if(n==1)
+            return 1;
+        else if(n%2==0)
+            return collatzSequence(n/2) + 1;
+        else
+            return collatzSequence(n*3+1) + 1;
+    }
+
 
 }

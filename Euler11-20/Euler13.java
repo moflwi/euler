@@ -3,10 +3,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigInteger;
 
-
 public class Euler13 {
     public static void main(String[] args) throws IOException {
-        BufferedReader csvReader = new BufferedReader(new FileReader("D:\\repos\\euler\\Euler11-20\\digits.csv"));
+        BufferedReader csvReader = new BufferedReader(new FileReader("libs\\digits.csv"));
         String row ="";
         BigInteger sum = BigInteger.ZERO;
         while ((row = csvReader.readLine()) != null) 
