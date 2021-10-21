@@ -217,5 +217,15 @@ public class EulerLib {
             return collatzSequence(n*3+1) + 1;
     }
 
+    public void getPossibleRoutes(int size) {
+        long path = 1;
+        for(int i = 0; i < size; i++) {
+            path *= 2*size -i;
+            path /= i+1;
+        }
+        System.out.println(path);
+    }
+
+
 
 }
